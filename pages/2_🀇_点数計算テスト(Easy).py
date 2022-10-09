@@ -5,7 +5,7 @@ import random
 from question.initialize import initialize
 
 st.set_page_config(
-    page_title="点数早見表",
+    page_title="点数計算テスト(Easy)",
     page_icon="🀐",
 )
 
