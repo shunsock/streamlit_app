@@ -11,3 +11,5 @@ Hello! I'm ShunDeveloper. I made this site for learning streamlit and good mahjo
     - changed some title for page
 - 2022-10-17
     - fix csv file for oya_ron.csv
+- 2022-10-19
+    - fix csv file for ko_ron.csv
