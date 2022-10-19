@@ -22,5 +22,9 @@ st.markdown(
     - 2022-10-09
         - added New mode for 点数計算テスト
         - changed some title for page
+    - 2022-10-17
+        - fix csv file for oya_ron.csv
+    - 2022-10-19
+        - fix csv file for ko_ron.csv
 """
 )
