@@ -2,8 +2,14 @@
 ## 日本の方へ
 私はShunDeveloperです. このサイトはstreamlitの勉強と快適な麻雀ライフの為に作成しました. 何かあればGithubでお聞きください
 
+- Site: [mahjong.streamlit.app](https://mahjong.streamlit.app/)
+- Contact: [GitHub](https://github.com/ShunDeveloper/streamlit_app)
+
 ## For Overseas friends
 Hello! I'm ShunDeveloper. I made this site for learning streamlit and good mahjong life. if you have any question, you can ask me at Github
+
+- Site: [mahjong.streamlit.app](https://mahjong.streamlit.app/)
+- Contact: [GitHub](https://github.com/ShunDeveloper/streamlit_app)
 
 # UPDATE
 - 2022-10-09
@@ -13,3 +19,6 @@ Hello! I'm ShunDeveloper. I made this site for learning streamlit and good mahjo
     - fix csv file for oya_ron.csv
 - 2022-10-19
     - fix csv file for ko_ron.csv
+- 2022-11-19
+    - change app subdomain
+    - change app documentation file
