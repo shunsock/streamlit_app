@@ -30,6 +30,8 @@ if KEY_ANSWER not in st.session_state:
         # 存在する翻と符の組み合わせが得られるまで試行を繰り返す
         while isNA(tmp_answer):
             tmp_question, tmp_answer= initialize(mode=GAME_MODE)
+    
+    # 存在する翻と符の組み合わせが得られたら更新する
     st.session_state[KEY_QUESTION], st.session_state[KEY_ANSWER] = tmp_question, tmp_answer
 
 
