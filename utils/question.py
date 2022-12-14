@@ -8,7 +8,7 @@ OYA_RON_DF = pd.read_csv(DATA_DIR+'oya_ron.csv', index_col=0, dtype='str')
 OYA_TUMO_DF = pd.read_csv(DATA_DIR+'oya_tumo.csv', index_col=0, dtype='str')
 OYA_TUMO_DF = OYA_TUMO_DF.fillna('0').applymap(lambda x: '<NA>' if x == '0' else str(x)+' all')
 
-def initialize(mode):
+def question(mode):
     oya_or_ko = random.choice(['親','子'])
     tumo_or_ron = random.choice(['ツモ','ロン'])
     han = random.choice(list(range(1,5)))
