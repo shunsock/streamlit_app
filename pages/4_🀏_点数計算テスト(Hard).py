@@ -31,11 +31,7 @@ if 'answer' not in st.session_state:
         # 存在する翻と符の組み合わせが得られるまで試行を繰り返す
         while isNA(tmp_answer):
             tmp_question, tmp_answer= initialize(mode=GAME_MODE)
-        # 存在する翻と符の組み合わせが得られたら更新する
-        st.session_state['question_hard'], st.session_state['answer_hard'] = tmp_question, tmp_answer
-    else:
-        # 存在する翻と符の組み合わせが得られたら更新する
-        st.session_state['question_hard'], st.session_state['answer_hard'] = tmp_question, tmp_answer
+    st.session_state['question_hard'], st.session_state['answer_hard'] = tmp_question, tmp_answer
 
 ### UI
 st.title("点数計算テスト")
@@ -47,13 +43,10 @@ if agree:
     st.write('答え:',st.session_state['answer_hard'])
     tmp_question, tmp_answer= initialize(mode=GAME_MODE)
 
-    if isNA(tmp_answer):
-        # 存在しない翻と符の組み合わせだった場合やり直す
-        # 存在する翻と符の組み合わせが得られるまで試行を繰り返す
-        while isNA(tmp_answer):
-            tmp_question, tmp_answer= initialize(mode=GAME_MODE)
-        # 存在する翻と符の組み合わせが得られたら更新する
-        st.session_state['question_hard'], st.session_state['answer_hard'] = tmp_question, tmp_answer
-    else:
-        # 存在する翻と符の組み合わせが得られたら更新する
-        st.session_state['question_hard'], st.session_state['answer_hard'] = tmp_question, tmp_answer
+    # 存在しない翻と符の組み合わせだった場合やり直す
+    # 存在する翻と符の組み合わせが得られるまで試行を繰り返す
+    while isNA(tmp_answer):
+        tmp_question, tmp_answer= initialize(mode=GAME_MODE)
+    
+    # 存在する翻と符の組み合わせが得られたら更新する
+    st.session_state['question_hard'], st.session_state['answer_hard'] = tmp_question, tmp_answer
