@@ -22,3 +22,9 @@ Hello! I'm ShunDeveloper. I made this site for learning streamlit and good mahjo
 - 2022-11-19
     - change app subdomain
     - change app documentation file
+- 2022-12-16
+    - security update
+    - refactoring
+- 2022-12-17
+    - add testing with GitHub Actions
+    - change csv file for future update: visualizing
