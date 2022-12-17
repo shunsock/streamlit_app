@@ -1,4 +1,4 @@
-run-name: test-utils
+run-name: test-app
 on:
   push:
     branches:
