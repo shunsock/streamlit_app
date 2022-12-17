@@ -9,10 +9,23 @@ st.set_page_config(
 
 DATA_DIR = 'data/'
 KO_RON_DF = pd.read_csv(DATA_DIR+'ko_ron.csv', index_col=0, dtype='str').T
-KO_TUMO_DF = pd.read_csv(DATA_DIR+'ko_tumo.csv', index_col=0, dtype='str').T
+KO_RON_DF = KO_RON_DF.applymap(lambda x: '<NA>' if x == '0' else str(x)) # dtype strで読みこんでいる為
 OYA_RON_DF = pd.read_csv(DATA_DIR+'oya_ron.csv', index_col=0, dtype='str').T
+OYA_RON_DF = OYA_RON_DF.applymap(lambda x: '<NA>' if x == '0' else str(x))
 OYA_TUMO_DF = pd.read_csv(DATA_DIR+'oya_tumo.csv', index_col=0, dtype='str').T
-OYA_TUMO_DF = OYA_TUMO_DF.fillna('0').applymap(lambda x: '<NA>' if x == '0' else str(x)+' all')
+OYA_TUMO_DF = OYA_TUMO_DF.applymap(lambda x: '<NA>' if x == '0' else str(x)+' all')
+
+KO_TUMO_FOR_OYA_DF = pd.read_csv(DATA_DIR+'ko_tumo_for_oya.csv', index_col=0, dtype='str').T
+KO_TUMO_FOR_KO_DF = pd.read_csv(DATA_DIR+'ko_tumo_for_ko.csv', index_col=0, dtype='str').T
+# str型で読みこんでいるのでconcatできる
+KO_TUMO_DF = pd.DataFrame(
+    KO_TUMO_FOR_KO_DF.values+'-'+KO_TUMO_FOR_OYA_DF.values,
+    columns=KO_TUMO_FOR_OYA_DF.columns,
+    index=KO_TUMO_FOR_OYA_DF.index,
+    dtype='str'
+)
+KO_TUMO_DF = KO_TUMO_DF.applymap(lambda x: '<NA>' if x == '0-0' else str(x))
+
 
 ### UI
 st.title("点数早見表")
@@ -41,7 +54,4 @@ st.dataframe(OYA_RON_DF,use_container_width=True)
 
 st.subheader("ツモ和了")
 st.caption('親のツモ和了は子のツモの親被りと同じだけ子全員に請求します')
-
 st.dataframe(OYA_TUMO_DF,use_container_width=True)
-st.sidebar.success("Select a demo above.")
-
