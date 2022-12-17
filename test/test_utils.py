@@ -9,12 +9,12 @@ from utils.question import question
 def test_is_na_false():
     print()
     print('FUNCTION WORKING TEST: is_na (output must be false)')
-    assert is_na(text=1) == False
+    assert is_na(text="1000") == False
     print('='*30)
 
 def test_is_na_true():
     print('FUNCTION WORKING TEST: is_na (output must true)')
-    assert is_na(text='<NA>') == True
+    assert is_na(text="<NA>") == True
     assert is_na(text=1.3) == True
     print('='*30)
 

@@ -27,7 +27,7 @@ if KEY_ANSWER not in st.session_state:
     st.session_state[KEY_QUESTION], st.session_state[KEY_ANSWER] = tmp_question, tmp_answer
 
 ### UI
-st.title("点数計算テスト")
+st.title("点数計算テスト(EASY)")
 st.write('Easyでは20符~30符の中から問題が出題されます')
 st.write('問題:この手の点数を計算してください')
 st.write(st.session_state[KEY_QUESTION])

@@ -8,7 +8,7 @@ st.set_page_config(
     menu_items={
         'Get Help': 'https://mahjong.streamlit.app',
         'Report a bug': "https://github.com/ShunDeveloper/streamlit_app",
-        'About': "# This is a header. This is an *extremely* cool app!"
+        'About': "mahjong calc app"
     }
 )
 
@@ -41,5 +41,11 @@ Hello! I'm ShunDeveloper. I made this site for learning streamlit and good mahjo
 - 2022-11-19
     - change app subdomain
     - change app documentation file
+- 2022-12-16
+    - security update
+    - refactoring
+- 2022-12-17
+    - add testing with GitHub Actions
+    - change csv file for future update: visualizing
 """
 )

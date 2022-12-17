@@ -28,7 +28,7 @@ if 'answer' not in st.session_state:
     st.session_state[KEY_QUESTION], st.session_state[KEY_ANSWER] = tmp_question, tmp_answer
 
 ### UI
-st.title("点数計算テスト")
+st.title("点数計算テスト(HARD)")
 st.write('問題:この手の点数を計算してください')
 st.write(st.session_state[KEY_QUESTION])
 agree = st.checkbox('答えを確認する')
