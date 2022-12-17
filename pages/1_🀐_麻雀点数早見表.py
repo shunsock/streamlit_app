@@ -8,12 +8,21 @@ st.set_page_config(
 )
 
 DATA_DIR = 'data/'
+
 KO_RON_DF = pd.read_csv(DATA_DIR+'ko_ron.csv', index_col=0, dtype='str').T
 KO_RON_DF = KO_RON_DF.applymap(lambda x: '<NA>' if x == '0' else str(x)) # dtype strで読みこんでいる為
+KO_RON_DF.index = [obj+'符' for obj in KO_RON_DF.index]
+KO_RON_DF.columns = index=[str(i)+'翻' for i in range(1,14)]
+
 OYA_RON_DF = pd.read_csv(DATA_DIR+'oya_ron.csv', index_col=0, dtype='str').T
 OYA_RON_DF = OYA_RON_DF.applymap(lambda x: '<NA>' if x == '0' else str(x))
+OYA_RON_DF.index = [obj+'符' for obj in OYA_RON_DF.index]
+OYA_RON_DF.columns = index=[str(i)+'翻' for i in range(1,14)]
+
 OYA_TUMO_DF = pd.read_csv(DATA_DIR+'oya_tumo.csv', index_col=0, dtype='str').T
 OYA_TUMO_DF = OYA_TUMO_DF.applymap(lambda x: '<NA>' if x == '0' else str(x)+' all')
+OYA_TUMO_DF.index = [obj+'符' for obj in OYA_TUMO_DF.index]
+OYA_TUMO_DF.columns = index=[str(i)+'翻' for i in range(1,14)]
 
 KO_TUMO_FOR_OYA_DF = pd.read_csv(DATA_DIR+'ko_tumo_for_oya.csv', index_col=0, dtype='str').T
 KO_TUMO_FOR_KO_DF = pd.read_csv(DATA_DIR+'ko_tumo_for_ko.csv', index_col=0, dtype='str').T
@@ -24,7 +33,10 @@ KO_TUMO_DF = pd.DataFrame(
     index=KO_TUMO_FOR_OYA_DF.index,
     dtype='str'
 )
+
 KO_TUMO_DF = KO_TUMO_DF.applymap(lambda x: '<NA>' if x == '0-0' else str(x))
+KO_TUMO_DF.index = [obj+'符' for obj in KO_TUMO_DF.index]
+KO_TUMO_DF.columns = index=[str(i)+'翻' for i in range(1,14)]
 
 
 ### UI
