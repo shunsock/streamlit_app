@@ -47,5 +47,6 @@ Hello! I'm ShunDeveloper. I made this site for learning streamlit and good mahjo
 - 2022-12-17
     - add testing with GitHub Actions
     - change csv file for future update: visualizing
+    - visualize relationship between point and fu
 """
 )
