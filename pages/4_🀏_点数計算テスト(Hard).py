@@ -30,7 +30,7 @@ if 'answer' not in st.session_state:
 ### UI
 st.title("点数計算テスト")
 st.write('問題:この手の点数を計算してください')
-st.write(st.session_state[KEY_QUESTION], key=GAME_MODE)
+st.write(st.session_state[KEY_QUESTION])
 agree = st.checkbox('答えを確認する')
 if agree:
     st.write('チェックボックスを外すと次の問題へ行きます')
