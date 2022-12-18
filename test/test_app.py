@@ -34,3 +34,11 @@ def test_app_page():
         res = str(res)
         assert '<Response [200]>' == res
     print('='*30)
+
+def test_app_page():
+    print('WORKING TEST: Not Found Request')
+    time.sleep(2)
+    res = requests.get(ROOT_URL+'/hoge')
+    res = str(res)
+    assert '<Response [404]>' == res
+    print('='*30)
