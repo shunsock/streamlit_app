@@ -99,7 +99,7 @@ if look_ko_tumo:
     fig, ax = plt.subplots()
     plots = [
         ax.plot(
-            OYA_TUMO_DF.loc[i]
+            OYA_TUMO_DF.loc[i]*3
         )
         for i in OYA_TUMO_DF.index.values
     ]
