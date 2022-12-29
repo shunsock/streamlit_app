@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "streamlit"
+version = "1.16.0"
+description = ""
+authors = ["ShunDeveloper <s.tsuchiya.business@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = "^2.28.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

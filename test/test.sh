@@ -1,5 +1,5 @@
 echo 'start: running app [1/3]'
-nohup streamlit run app.py > log.txt 2>&1 &
+nohup poetry run streamlit run app.py > log.txt 2>&1 &
 echo $! > save_pid.txt # save current pid
 echo 'ok: running app [1/3]'
 
