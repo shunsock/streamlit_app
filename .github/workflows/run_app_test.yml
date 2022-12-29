@@ -8,20 +8,22 @@ on:
       - dev
       - main
 jobs:
-  run-python:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Setup Python
-    - uses: actions/setup-python@v4
-      with:
-        python-version: '3.8'
-    - name: Install poetry
-        run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-        run: echo "$HOME/.poetry/bin" >> $GITHUB_PATH
-    - name: Poetry Version
-        run: poetry --version
-    - name: Poetry Install Dependencies
-        run: poetry install --no-interaction
-    - name: running pytest    
-        run: bash test/test.sh
+    ci:
+     strategy:
+        fail-fast: false
+        matrix:
+                python-version: ["3.8"]
+                poetry-version: ["1.0", "1.1.11"]
+                os: [ubuntu-latest]
+     runs-on: ${{ matrix.os }}
+     steps:
+        - uses: actions/checkout@v2
+        - uses: actions/setup-python@v2
+        with:
+                python-version: ${{ matrix.python-version }}
+        - name: Run image
+          uses: abatilo/actions-poetry@v2.0.0
+          with:
+                poetry-version: ${{ matrix.poetry-version }}
+        - name: View poetry --help
+                run: poetry --help
