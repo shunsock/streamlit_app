@@ -1,5 +1,6 @@
 env
 .vscode
 __pycache__
+test/__pycache__
 .pytest_cache/
 utils/__pycache__

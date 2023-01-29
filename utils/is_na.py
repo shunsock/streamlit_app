@@ -1,5 +1,5 @@
 # textがnaならTrueを返す
-def is_na(text):
+def is_na(text: str) -> bool:
     flag = False
     if text=='<NA>':
         flag=True
