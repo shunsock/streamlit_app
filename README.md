@@ -27,6 +27,12 @@ Hello! I'm ShunDeveloper. I made this site for learning streamlit and good mahjo
 - Site: [mahjong.streamlit.app](https://mahjong.streamlit.app/)
 - Contact: [GitHub](https://github.com/ShunDeveloper/streamlit_app)
 
+# Contribution
+Everyone can contribute with this repo. if you want to commit, create request to `dev` branch.
+
+- When pushing, GitHub Action try running test script.
+- make sure doing test on local and do command `black pages/ test/ utils/` and `isort pages/ test/ utils/`.
+
 # UPDATE
 - 2022-10-09
     - added New mode for 点数計算テスト
