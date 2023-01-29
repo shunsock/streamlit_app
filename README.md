@@ -29,3 +29,7 @@ Hello! I'm ShunDeveloper. I made this site for learning streamlit and good mahjo
     - add testing with GitHub Actions
     - change csv file for future update: visualizing
     - visualize relationship between point and fu
+- 2023-01-28
+    - security update
+- 2023-01-29
+    - add type hint on question.py
