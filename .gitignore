@@ -4,3 +4,4 @@ __pycache__
 test/__pycache__
 .pytest_cache/
 utils/__pycache__
+node_modules
