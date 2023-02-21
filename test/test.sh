@@ -22,4 +22,5 @@ echo 'ok: [3/4]'
 echo 'start: shutdown [4/4]'
 kill -9 `cat save_pid.txt`
 rm save_pid.txt
+rm log.txt
 echo 'ok: shutdown [4/4]'
