@@ -42,7 +42,7 @@ KO_TUMO_DF = pd.DataFrame(
 def show_picture(df: pd.DataFrame) -> None:
     fig, ax = plt.subplots()
     for i in range(len(df.index.values)):
-        ax.plot(df.loc[i])
+        ax.plot(df.iloc[i])
     ax.set_xlabel("Han")
     ax.set_ylabel("Point")
     ax.legend(df.index.values)
