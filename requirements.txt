@@ -3,7 +3,7 @@ async-generator==1.10
 attrs==22.2.0
 backports.zoneinfo==0.2.1;python_version<"3.9"
 behave==1.2.6
-black==23.1.0
+black==24.3.0
 blinker==1.5
 branca==0.6.0
 cachetools==5.3.0
