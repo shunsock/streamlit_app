@@ -116,4 +116,4 @@ validators==0.20.0
 watchdog==2.2.1
 websockets==10.4
 wsproto==1.2.0
-zipp==3.14.0
+zipp==3.19.1
